@@ -9,26 +9,31 @@ body {
 }
 
 header {
-    height: 40vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('anime1.jpg');
+    width: 100%;
+    padding: 80px 0; /* Vertical space */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('anime1.jpg');
     background-size: cover;
     background-position: center;
+    /* This is the magic for centering everything inside */
+    text-align: center !important; 
 }
 
-h1 { font-size: 2.5rem; letter-spacing: 2px; margin-bottom: 0; }
+h1 {
+    display: block;
+    width: 90%; /* Leaves a little gap on the sides of the screen */
+    margin: 0 auto 10px auto; /* Centers the block itself */
+    font-size: 1.8rem; /* Smaller size for mobile */
+    text-align: center !important;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+    word-wrap: break-word; /* Ensures long names don't spill out */
+}
 
-/* The Gallery Grid */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    padding: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
+header p {
+    display: block;
+    width: 100%;
+    text-align: center !important;
+    margin: 0;
+    color: #ccc;
 }
 
 /* Flashy Hover Effects */
