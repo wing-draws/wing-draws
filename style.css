@@ -75,4 +75,19 @@ footer {
     padding: 40px;
     font-size: 0.8rem;
     color: #555;
+}/* Add this to the bottom of style.css */
+
+.small-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Makes images sit side-by-side */
+    gap: 15px;
+    padding: 20px;
 }
+
+.small-grid .card {
+    height: 300px; /* Limits the height so they don't look massive */
+    width: 100%;
+    object-fit: cover; /* Crops them neatly into a uniform grid */
+    object-position: center; 
+}
+
